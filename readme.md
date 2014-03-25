@@ -4,7 +4,7 @@ django-template (β)
 A <cite>Django</cite> project template.
 
 ## Prerequisites
-* [Python ~ 3.3.4](http://www.python.org/)
+* [Python ~ 3.3.3](http://www.python.org/)
 * [NPM](https://npmjs.org/)
 * [Gulp](http://gulpjs.com/)
 * [Compass](http://compass*style.org/)

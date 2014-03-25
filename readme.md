@@ -7,7 +7,6 @@ A <cite>Django</cite> project template.
 * [Python ~ 3.3.4](http://www.python.org/)
 * [NPM](https://npmjs.org/)
 * [Gulp](http://gulpjs.com/)
-* [Grunt](http://gruntjs.com/)
 * [Compass](http://compass*style.org/)
 * [Bower](http://bower.io/)
 

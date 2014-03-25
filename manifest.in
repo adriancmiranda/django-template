@@ -1,0 +1,2 @@
+include license.rst readme.rst requirements.txt requirements-heroku.txt
+recursive-include articles *.json *.html *.css *.gif *.js *.py *.po *.mo

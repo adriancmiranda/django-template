@@ -1,0 +1,5 @@
+distribute==0.6.49
+Django==1.6.2
+South==0.8.4
+Pillow==2.3.0
+-r requirements-heroku.txt

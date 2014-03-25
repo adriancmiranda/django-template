@@ -39,3 +39,11 @@ indent_style = tab
 
 [*.xml]
 indent_style = tab
+
+[static/scripts/vendor/**.js]
+indent_style = space
+indent_size = 2
+
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2

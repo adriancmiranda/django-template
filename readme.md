@@ -65,11 +65,14 @@ django-admin.py startproject --template=https://github.com/adriancmiranda/django
 * [Getting started with gulp-zip][gulp_zip]
 * [Getting started with gulp-notify][gulp_notify]
 
-### Compass
+### SASS
 * [SASS CSS Importer][sass_css_importer]
 
 ### Coffee
 * [Coffee Script][coffee_script]
+
+### Helpfull
+* [BEM - Block Element Modifier][bem]
 
 ### Heroku
 * [Deploying with Git][heroku_deploying_with_git]
@@ -167,6 +170,7 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [heroku_logging]: https://devcenter.heroku.com/articles/logging "Logging"
 
 <!-- helpfull links -->
+[bem]: http://bem.info/method/definitions/ "BEM - Block Element Modifier"
 [manifest.in]: http://docs.python.org/2/distutils/sourcedist.html "MANIFEST.in file"
 [editorconfig]: http://editorconfig.org "Editor Config"
 [travisci]: http://docs.travis-ci.com/pt-BR/user/languages/python/ "Travis CI"

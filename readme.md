@@ -20,7 +20,7 @@ git clone git@github.com:adriancmiranda/django-template.git
 ```
 
 ```bash
-chmod a+rx makevenv && . makevenv
+chmod +x makevenv && . makevenv
 ```
 
 ```bash

@@ -3,6 +3,14 @@ django-template (β)
 
 A <cite>Django</cite> project template.
 
+## Prerequisites
+* [Python ~ 3.3.4](http://www.python.org/)
+* [NPM](https://npmjs.org/)
+* [Gulp](http://gulpjs.com/)
+* [Grunt](http://gruntjs.com/)
+* [Compass](http://compass*style.org/)
+* [Bower](http://bower.io/)
+
 ## Getting started
 ### Setup project
 #### Prepare project
@@ -19,14 +27,6 @@ chmod a+rx makevenv && . makevenv
 ```bash
 django-admin.py startproject --template=https://github.com/adriancmiranda/django-template/zipball/master <project_name>
 ```
-
-## Prerequisites
-* [Python ~ 3.3.4](http://www.python.org/)
-* [NPM](https://npmjs.org/)
-* [Gulp](http://gulpjs.com/)
-* [Grunt](http://gruntjs.com/)
-* [Compass](http://compass*style.org/)
-* [Bower](http://bower.io/)
 
 ## Learn to use
 ### Django

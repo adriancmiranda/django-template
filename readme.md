@@ -82,7 +82,16 @@ django-admin.py startproject --template=https://github.com/adriancmiranda/django
 ## Support
 Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
+## Contributing
+1. [Fork it][fork_it]
+2. Create your feature branch (`git checkout -b my-new-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin my-new-feature`).
+5. Create new [Pull request][pull_request].
+
 <!-- project links -->
+[fork_it]: https://github.com/adriancmiranda/django-template/fork "Fork it"
+[pull_request]: https://github.com/adriancmiranda/django-template/compare/ "Pull request"
 [issue_tracker]: http://github.com/adriancmiranda/am.io/issues "Issue tracker"
 
 <!-- django links -->

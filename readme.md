@@ -1,7 +1,7 @@
 django-template (β)
 ===================
 
-A <cite>Django</cite> project template.
+A [_Django_][django] project template.
 
 ## Prerequisites
 * [Python ~ 3.3.3](http://www.python.org/ "Python 3")
@@ -14,7 +14,7 @@ A <cite>Django</cite> project template.
 ## Getting started
 ### Setup project
 #### Prepare project
-Start with creating a new <cite>Django</cite> project based on this project template:
+Start with creating a new [_Django_][django] project based on this project template:
 
 ```bash
 git clone git@github.com:adriancmiranda/django-template.git && cd django-template
@@ -84,16 +84,16 @@ django-admin.py startproject --template=https://github.com/adriancmiranda/django
 Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
 ## Contributing
-1. [Fork it][fork_it]
+1. [_Fork_][fork] it
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Commit your changes (`git commit -am 'Add some feature'`).
 4. Push to the branch (`git push origin my-new-feature`).
 5. Create new [Pull request][pull_request].
 
 <!-- project links -->
-[fork_it]: https://github.com/adriancmiranda/django-template/fork "Fork it"
-[pull_request]: https://github.com/adriancmiranda/django-template/compare/ "Pull request"
-[issue_tracker]: http://github.com/adriancmiranda/am.io/issues "Issue tracker"
+[fork]: https://github.com/adriancmiranda/django-template/fork "Fork it"
+[pull_request]: https://github.com/adriancmiranda/django-template/compare "Pull request"
+[issue_tracker]: http://github.com/adriancmiranda/django-template/issues "Issue tracker"
 
 <!-- django links -->
 [aprendendo_django]: http://www.aprendendodjango.com/organizando-as-coisas-com-tags/ "Aprendendo Django"
@@ -170,3 +170,4 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [manifest.in]: http://docs.python.org/2/distutils/sourcedist.html "MANIFEST.in file"
 [editorconfig]: http://editorconfig.org "Editor Config"
 [travisci]: http://docs.travis-ci.com/pt-BR/user/languages/python/ "Travis CI"
+[django]: https://www.djangoproject.com/ "Django Project"

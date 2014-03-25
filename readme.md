@@ -4,11 +4,12 @@ django-template (β)
 A <cite>Django</cite> project template.
 
 ## Prerequisites
-* [Python ~ 3.3.3](http://www.python.org/)
-* [NPM](https://npmjs.org/)
-* [Gulp](http://gulpjs.com/)
-* [Compass](http://compass*style.org/)
-* [Bower](http://bower.io/)
+* [Python ~ 3.3.3](http://www.python.org/ "Python 3")
+* [Python Virtual Enviroment](http://docs.python.org/dev/library/venv.html "Python Virtual ENViroment")
+* [NPM](https://npmjs.org/ "Node Packaged Modules")
+* [Gulp](http://gulpjs.com/ "GulpJS - Streaming build system")
+* [Compass](http://compass*style.org/ "Compass - CSS authoring framework")
+* [Bower](http://bower.io/ "Bower - Package manager")
 
 ## Getting started
 ### Setup project

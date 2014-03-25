@@ -16,7 +16,7 @@ A <cite>Django</cite> project template.
 Start with creating a new <cite>Django</cite> project based on this project template:
 
 ```bash
-git clone git@github.com:adriancmiranda/django-template.git
+git clone git@github.com:adriancmiranda/django-template.git && cd django-template
 ```
 
 ```bash

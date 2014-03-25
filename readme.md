@@ -3,6 +3,23 @@ django-template (β)
 
 A <cite>Django</cite> project template.
 
+## Getting started
+### Setup project
+#### Prepare project
+Start with creating a new <cite>Django</cite> project based on this project template:
+
+```bash
+git clone git@github.com:adriancmiranda/django-template.git
+```
+
+```bash
+chmod a+rx makevenv && . makevenv
+```
+
+```bash
+django-admin.py startproject --template=https://github.com/adriancmiranda/django-template/zipball/master <project_name>
+```
+
 ## Prerequisites
 * [Python ~ 3.3.4](http://www.python.org/)
 * [NPM](https://npmjs.org/)
@@ -62,23 +79,6 @@ A <cite>Django</cite> project template.
 * [Configuration and Config Vars][heroku_config_vars]
 * [Slug Compiler][heroku_slug_compiler]
 * [Logging][heroku_logging]
-
-## Getting started
-### Setup project
-#### Prepare project
-Start with creating a new <cite>Django</cite> project based on this project template:
-
-```bash
-git clone git@github.com:adriancmiranda/django-template.git
-```
-
-```bash
-chmod a+rx makevenv && . makevenv
-```
-
-```bash
-django-admin.py startproject --template=https://github.com/adriancmiranda/django-template/zipball/master <project_name>
-```
 
 ## Support
 Bugs and issues should be reported via the [issue tracker][issue_tracker].

@@ -1,4 +1,4 @@
-//|
+//|**
 //| {{ project_name }}
 //|
 //| This file is the main application file
@@ -17,5 +17,5 @@
 //|
 //| Comment syntax for the entire project follows JSDoc:
 //| - http://code.google.com/p/jsdoc-toolkit/wiki/TagReference
-//'
+//'*/
 console.log('\'Allo \'Allo!');

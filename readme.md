@@ -21,11 +21,7 @@ git clone git@github.com:adriancmiranda/django-template.git && cd django-templat
 ```
 
 ```bash
-chmod +x makevenv && . makevenv
-```
-
-```bash
-django-admin.py startproject --template=https://github.com/adriancmiranda/django-template/zipball/master <project_name>
+chmod +x inflate && . inflate <project_name>
 ```
 
 ## Learn to use

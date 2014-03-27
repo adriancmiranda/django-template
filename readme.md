@@ -69,6 +69,8 @@ chmod +x inflate && . inflate <project_name>
 
 ### Helpfull
 * [BEM - Block Element Modifier][bem]
+* [Support for BEM modules SASS][support_bem_for_sass]
+* [Modular CSS with SASS and BEM][modular_css_with_sass_and_bem]
 
 ### Heroku
 * [Deploying with Git][heroku_deploying_with_git]
@@ -167,6 +169,8 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
 <!-- helpfull links -->
 [bem]: http://bem.info/method/definitions/ "BEM - Block Element Modifier"
+[support_bem_for_sass]: http://mikefowler.me/2013/10/17/support-for-bem-modules-sass-3.3 "Support for BEM modules SASS"
+[modular_css_with_sass_and_bem]: http://www.mathayward.com/modular-css-with-sass-and-bem/ "Modular CSS with SASS and BEM"
 [manifest.in]: http://docs.python.org/2/distutils/sourcedist.html "MANIFEST.in file"
 [editorconfig]: http://editorconfig.org "Editor Config"
 [travisci]: http://docs.travis-ci.com/pt-BR/user/languages/python/ "Travis CI"

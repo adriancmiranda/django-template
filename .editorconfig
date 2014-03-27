@@ -47,6 +47,6 @@ indent_style = tab
 indent_style = space
 indent_size = 2
 
-[{package.json,.travis.yml}]
+[{package.json,.travis.yml,static/bower.json}]
 indent_style = space
 indent_size = 2

@@ -8,6 +8,7 @@ A [_Django_][django] project template.
 * [Python Virtual Enviroment](http://docs.python.org/dev/library/venv.html "Python Virtual ENViroment")
 * [Node](http://nodejs.org/ "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications")
 * [Ruby](https://www.ruby-lang.org/pt "Ruby")
+* [SASS](http://sass-lang.com/install "SASS - Syntactically Awesome Style Sheets")
 * [Gulp](http://gulpjs.com/ "GulpJS - Streaming build system")
 * [Compass](http://compass*style.org/ "Compass - CSS authoring framework")
 * [Bower](http://bower.io/ "Bower - Package manager")

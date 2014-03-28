@@ -33,13 +33,15 @@ function makeVirtualEnvironment {
 			curl -O http://python-distribute.org/distribute_setup.py;
 			python distribute_setup.py;
 			easy_install pip;
-			pip install -r "$DIR/requirements.txt";
 		else
 			echo "Error: Invalid name";
 		fi
 	else
 		source "$NAME/bin/activate";
 	fi
+}
+function installDependencies {
+	pip install -r "$DIR/requirements.txt";
 }
 function cleanup {
 	TRASH=$(find . \( \
@@ -52,8 +54,9 @@ function cleanup {
 	);
 	rm -rf $TRASH;
 }
-makeVirtualEnvironment "venv" ".";
-if [[ ! -z "$1" ]]; then
-	django-admin.py startproject --template=https://github.com/adriancmiranda/django-template/zipball/master "$1";
-fi
-cleanup;
+function startup {
+	makeVirtualEnvironment "venv" ".";
+	installDependencies;
+	cleanup;
+}
+startup;

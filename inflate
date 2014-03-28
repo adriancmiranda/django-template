@@ -57,6 +57,7 @@ function cleanup {
 function startup {
 	makeVirtualEnvironment "venv" ".";
 	installDependencies;
+	npm install;
 	cleanup;
 }
 startup;

@@ -23,41 +23,43 @@
 #| use "source" to run it's activate script.
 #'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function makeVirtualEnvironment {
-	local NAME="$1";
-	local DIR="$2";
+	local NAME=${1:venv};
+	local DIR=$(dirname "$2");
 	if [[ ! -f "$DIR/$NAME/bin/activate" ]]; then
 		if [[ "$NAME" =~ ^[a-zA-Z][a-zA-Z0-9]*$ ]]; then
-			mkdir -pv $DIR && cd $DIR;
-			pyvenv "$NAME";
-			source "$DIR/$NAME/bin/activate";
-			curl -O http://python-distribute.org/distribute_setup.py;
-			python distribute_setup.py;
-			easy_install pip;
+			if [[ -f "$DIR/requirements.txt" ]]; then
+				mkdir -pv $DIR && cd $DIR && \
+				pyvenv "$NAME" && \
+				source "$DIR/$NAME/bin/activate" && \
+				curl -O http://python-distribute.org/distribute_setup.py && \
+				python distribute_setup.py && \
+				easy_install pip && \
+				pip install -r "$DIR/requirements.txt";
+			else
+				printf "Error: requirements.txt file is required.\n";
+			fi
 		else
-			echo "Error: Invalid name";
+			printf "Error: Invalid name.\n";
 		fi
 	else
 		source "$NAME/bin/activate";
 	fi
 }
-function installDependencies {
-	pip install -r "$DIR/requirements.txt";
-}
 function cleanup {
-	TRASH=$(find . \( \
-		-type f -name empty -or \
-		-type f -name distribute* -or \
-		-type f -name *.DS_Store -or \
-		-type f -name Thumbs.db -or \
-		-type f -name ._Thumbs.db -or \
-		-type d -name __pycache__ \) \
+	local DIR=$(dirname "$1");
+	TRASH=$(find $DIR \( \
+		-type f -name 'empty' -or \
+		-type f -name 'distribute*' -ls -or \
+		-type f -name '*.DS_Store' -or \
+		-type f -name 'Thumbs.db' -or \
+		-type f -name '._Thumbs.db' -or \
+		-type d -name '__pycache__' \) \
 	);
 	rm -rf $TRASH;
 }
 function startup {
-	makeVirtualEnvironment "venv" ".";
-	installDependencies;
+	makeVirtualEnvironment "venv" "$2" && \
 	npm install;
 	cleanup;
 }
-startup;
+startup $1 $2;

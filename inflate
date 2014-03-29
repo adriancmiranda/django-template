@@ -1,0 +1,66 @@
+#!/bin/sh
+#|
+#| Title: Virtual Environment
+#| Copyright: © 2013 - Adrian C. Miranda
+#| License: This is free and unencumbered software released into the public domain.
+#| @version: 0.0.1
+#|
+#|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#| @usage:
+#|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#| If you want the activation of the virtualenv to change the shell
+#| that you call the script from, you need to use the "source" or
+#| "dot operator". This ensures that the script is run in the current
+#| shell (and therefore changes the current environment)...
+#|
+#| source bin/venv path/to/venv/name
+#|
+#| ...or...
+#|
+#| . bin/venv path/to/venv/name
+#|
+#| As a side note, this is why virtualenv always says you need to
+#| use "source" to run it's activate script.
+#'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function makeVirtualEnvironment {
+	local NAME=${1:venv};
+	local DIR=$(dirname "$2");
+	if [[ ! -f "$DIR/$NAME/bin/activate" ]]; then
+		if [[ "$NAME" =~ ^[a-zA-Z][a-zA-Z0-9]*$ ]]; then
+			if [[ -f "$DIR/requirements.txt" ]]; then
+				mkdir -pv $DIR && cd $DIR && \
+				pyvenv "$NAME" && \
+				source "$DIR/$NAME/bin/activate" && \
+				curl -O http://python-distribute.org/distribute_setup.py && \
+				python distribute_setup.py && \
+				easy_install pip && \
+				pip install -r "$DIR/requirements.txt";
+			else
+				printf "Error: requirements.txt file is required.\n";
+			fi
+		else
+			printf "Error: Invalid name.\n";
+		fi
+	else
+		source "$NAME/bin/activate";
+	fi
+}
+function cleanup {
+	local DIR=$(dirname "$1");
+	TRASH=$(find $DIR \( \
+		-type f -name 'empty' -or \
+		-type f -name 'distribute*' -or \
+		-type f -name '*.DS_Store' -or \
+		-type f -name 'Thumbs.db' -or \
+		-type f -name '._Thumbs.db' -or \
+		-type d -name '__pycache__' \) \
+	) && rm -rf $TRASH;
+}
+function startup {
+	local DIR=$(dirname "$2");
+	makeVirtualEnvironment "venv" "$DIR" && \
+	npm install && \
+	cd $DIR/static && bower install;
+	cleanup "$DIR";
+}
+startup $1 $2;

@@ -27,10 +27,10 @@ urlpatterns = patterns('',
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # http status
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-handler400 = 'application.views.bad_request'
-handler403 = 'application.views.permission_denied'
-handler404 = 'application.views.page_error'
-handler500 = 'application.views.server_error'
+handler400 = '{{ project_name }}.views.bad_request'
+handler403 = '{{ project_name }}.views.permission_denied'
+handler404 = '{{ project_name }}.views.page_error'
+handler500 = '{{ project_name }}.views.server_error'
 
 if getattr(settings, 'DEBUG', False):
 	from django.core.urlresolvers import get_resolver

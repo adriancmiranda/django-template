@@ -56,7 +56,7 @@ INSTALLED_APPS = (
 
 	# This is {{ project_name }} root module, place where
 	# I set my applications.
-	'application',
+	'{{ project_name }}',
 
 	# This is {{ project_name }} news module, place where
 	# I will post my news.
@@ -73,8 +73,8 @@ MIDDLEWARE_CLASSES = (
 	# Cookie-based, for anonymous users
 	'django.middleware.locale.LocaleMiddleware',
 )
-ROOT_URLCONF = 'application.urls'
-WSGI_APPLICATION = 'application.wsgi.application'
+ROOT_URLCONF = '{{ project_name }}.urls'
+WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Database

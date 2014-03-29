@@ -58,9 +58,25 @@ INSTALLED_APPS = (
 	# I set my applications.
 	'{{ project_name }}',
 
-	# This is {{ project_name }} news module, place where
+	# This is {{ project_name }} tags application, place where
+	# I track content links.
+	'tags',
+
+	# This is {{ project_name }} news application, place where
 	# I will post my news.
 	'news',
+
+	# This is {{ project_name }} blog application, place where
+	# I will post my articles.
+	'stream',
+
+	# This is {{ project_name }} labs application, place where
+	# I will post my experiments.
+	'labs',
+
+	# This is {{ project_name }} contact application, place where
+	# I will receive my mails.
+	'contact',
 )
 MIDDLEWARE_CLASSES = (
 	'django.contrib.sessions.middleware.SessionMiddleware',
@@ -134,7 +150,7 @@ STATICFILES_FINDERS = [
 	'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 GULPFILE = os.path.join(ROOT_DIR, 'static/gulpfile.js')
-STATIC_ROOT = os.path.join(ROOT_DIR, 'static_collected')
+STATIC_ROOT = os.path.join(ROOT_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
 	os.path.join(ROOT_DIR, 'static')

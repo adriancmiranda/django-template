@@ -12,6 +12,10 @@ urlpatterns = patterns('',
 # pages
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	url(r'^$', include('news.urls')),
+    url(r'^work/', include('work.urls')),
+    url(r'^labs/', include('labs.urls')),
+    url(r'^stream/', include('stream.urls')),
+    url(r'^contact/', include('contact.urls')),
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # admin

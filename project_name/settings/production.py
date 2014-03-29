@@ -9,8 +9,11 @@ ADMINS = [
     ('Me', 'my@mail.com'),
 ]
 
-# Parse database configuration from $DATABASE_URL
-DATABASES['default'] = dj_database_url.config(default=os.getenv('DATABASE_URL'))
+# Set Django's database settings to Heroku's environment variable
+# DATABASE_URL or default to Sqlite if unable to find.
+DATABASES['default'] = dj_database_url.config(default=os.environ.get(
+    'DATABASE_URL', 'sqlite:///' + os.path.join(basedir, '{{ project_name }}.sqlite3'))
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False

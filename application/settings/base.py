@@ -14,11 +14,11 @@ from .utils import rel
 import os, site
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-ROOT_DIR = rel('../..')
-BASE_DIR = rel('..')
+ROOT_DIR = rel('..')
+BASE_DIR = rel('')
 
 # site.addpackage is actually responsible for *.pth file processing
-site.addpackage(os.path.join(ROOT_DIR), 'modules.pth', known_paths=set());
+site.addpackage(os.path.join(ROOT_DIR), 'modules.pth', known_paths=set())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/

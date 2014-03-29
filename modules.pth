@@ -1,1 +1,1 @@
-./modules
+./{{ project_name }}/modules

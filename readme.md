@@ -19,11 +19,11 @@ A [_Django_][django] project template.
 Start with creating a new [_Django_][django] project based on this project template:
 
 ```bash
-curl -O https://github.com/adriancmiranda/django-template/blob/master/inflate
+curl -O https://raw.githubusercontent.com/adriancmiranda/django-template/master/inflate
 ```
 
 ```bash
-chmod +x inflate && . inflate <project_name>
+chmod +x inflate && . inflate
 ```
 
 ```bash

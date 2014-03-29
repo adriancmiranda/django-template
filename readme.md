@@ -19,6 +19,14 @@ A [_Django_][django] project template.
 Start with creating a new [_Django_][django] project based on this project template:
 
 ```bash
+curl -O https://raw.githubusercontent.com/adriancmiranda/django-template/master/requirements.txt
+```
+
+```bash
+curl -O https://raw.githubusercontent.com/adriancmiranda/django-template/master/requirements-heroku.txt
+```
+
+```bash
 curl -O https://raw.githubusercontent.com/adriancmiranda/django-template/master/inflate
 ```
 
@@ -28,6 +36,10 @@ chmod +x inflate && . inflate
 
 ```bash
 django-admin.py startproject --template=https://github.com/adriancmiranda/django-template/zipball/master <project_name>
+```
+
+```bash
+npm install
 ```
 
 This will set up and preconfigure your project.

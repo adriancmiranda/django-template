@@ -93,6 +93,7 @@ This will set up and preconfigure your project.
 * [Modular CSS with SASS and BEM][modular_css_with_sass_and_bem]
 
 ### Heroku
+* [Getting Started with Heroku][heroku_getting_started]
 * [Deploying with Git][heroku_deploying_with_git]
 * [Managing Multiple Environments for an App][heroku_multiple_environments]
 * [Getting started with Django][heroku_getting_started_with_django]
@@ -179,6 +180,7 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [coffee_script]: http://coffeescript.org "Coffee Script"
 
 <!-- heroku links -->
+[heroku_getting_started]: https://devcenter.heroku.com/articles/quickstart "Getting Started with Heroku"
 [heroku_deploying_with_git]: https://devcenter.heroku.com/articles/git "Deploying with Git"
 [heroku_multiple_environments]: https://devcenter.heroku.com/articles/multiple-environments "Managing Multiple Environments for an App"
 [heroku_getting_started_with_django]: https://devcenter.heroku.com/articles/getting-started-with-django "Getting started with Django"

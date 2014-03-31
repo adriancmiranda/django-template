@@ -30,14 +30,15 @@
 	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//| variables and constants - (gulpLoadPlugins)
 	//'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-	var _ = { app: './app', dist: './dist', tmpl: '../templates' };
-	var $ = gulpLoadPlugins({ pattern: '*', lazy: true });
+	var _ = { app: './app', dist: './dist', tmpl: '../templates' },
+	    $ = gulpLoadPlugins({ pattern: '*', lazy: true });
 
 	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//| lint - (plumber, jshint, jscs)
 	//'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 	gulp.task('lint', function() {
 		return gulp.src([
+			'gulpfile.js',
 			_.app + '/scripts/**/*.js',
 			'!' + _.app + '/scripts/vendor/**/*.js'
 		])
@@ -69,8 +70,8 @@
 			message: '<%= options.date %> ✓ script: <%= file.relative %>',
 			templateOptions: {
 				date: new Date()
-			}})
-		);
+			}
+		}));
 	});
 
 	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

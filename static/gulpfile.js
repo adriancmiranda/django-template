@@ -36,7 +36,23 @@
 	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//| lint - (plumber, jshint, jscs)
 	//'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-	gulp.task('lint', function() {
+	gulp.task('jsonlint', function() {
+		return gulp.src([
+			'package.json',
+			'bower.json',
+			'.bowerrc',
+			'.jshintrc',
+			'.jscs.json'
+		])
+		.pipe($.jsonlint())
+		.pipe($.jsonlint.reporter()).pipe($.notify({
+			message: '<%= options.date %> ✓ json: <%= file.relative %>',
+			templateOptions: {
+				date: new Date()
+			}
+		}));
+	});
+	gulp.task('lint', ['jsonlint'], function() {
 		return gulp.src([
 			'gulpfile.js',
 			_.app + '/scripts/**/*.js',
@@ -77,7 +93,17 @@
 	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//| images - (cache, imagemin, svgmin, size, notify)
 	//'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-	gulp.task('images', [], function() {
+	gulp.task('svg', function() {
+		return gulp.src(_.app + '/*.svg')
+		.pipe($.svgmin([{ removeDoctype: false }, { removeComments: false }]))
+		.pipe(gulp.dest(_.dist)).pipe($.size()).pipe($.notify({
+			message: '<%= options.date %> ✓ svg: <%= file.relative %>',
+			templateOptions: {
+				date: new Date()
+			}
+		}));
+	});
+	gulp.task('images', ['svg'], function() {
 		return gulp.src([
 			_.app + '/*.{png,jpg,jpeg,gif,ico}',
 			_.app + '/images/**/*.{png,jpg,jpeg,gif,ico}'

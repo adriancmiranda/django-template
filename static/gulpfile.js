@@ -78,9 +78,9 @@
 		$.requirejs({
 			baseUrl: _.app + '/scripts',
 			optimize: 'none',
-			include: ['requirejs/requirejs', 'boot'],
+			include: ['vendor/requirejs/require', 'boot'],
 			mainConfigFile: _.app + '/scripts/boot.js',
-			out: _.dist + '/scripts/am.in.js',
+			out: 'boot.min.js',
 			preserveLicenseComments: false,
 			generateSourceMaps: true,
 			useStrict: true,

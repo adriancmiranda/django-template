@@ -74,13 +74,33 @@
 	//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//| scripts - (plumber, size, notify)
 	//'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	gulp.task('require', ['lint'], function() {
+		$.requirejs({
+			baseUrl: _.app + '/scripts',
+			optimize: 'none',
+			include: ['requirejs/requirejs', 'boot'],
+			mainConfigFile: _.app + '/scripts/boot.js',
+			out: _.dist + '/scripts/am.in.js',
+			preserveLicenseComments: false,
+			generateSourceMaps: true,
+			useStrict: true,
+			wrap: true
+		})
+		.pipe($.plumber())
+		.pipe(gulp.dest(_.dist + '/scripts'))
+		.pipe($.size()).pipe($.notify({
+			message: '<%= options.date %> ✓ script: <%= file.relative %>',
+			templateOptions: {
+				date: new Date()
+			}
+		}));
+	});
 	gulp.task('scripts', ['lint'], function() {
 		return gulp.src([
-			_.app + '/scripts/**/*.js',
-			'!' + _.app + '/scripts/vendor/**/*.js'
+			_.app + '/scripts/vendor/modernizr/modernizr.js'
 		])
 		.pipe($.plumber())
-		.pipe($.concat('boot.min.js')).pipe($.uglify())
+		.pipe($.concat('header.min.js')).pipe($.uglify())
 		.pipe(gulp.dest(_.dist + '/scripts'))
 		.pipe($.size()).pipe($.notify({
 			message: '<%= options.date %> ✓ script: <%= file.relative %>',

@@ -83,6 +83,7 @@ This will set up and preconfigure your project.
 
 ### SASS
 * [SASS CSS Importer][sass_css_importer]
+* [How to use SASS with Django][how_to_use_sass_with_django]
 
 ### Coffee
 * [Coffee Script][coffee_script]
@@ -175,6 +176,7 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
 <!-- compass links -->
 [sass_css_importer]: https://github.com/chriseppstein/sass-css-importer "SASS CSS Importer"
+[how_to_use_sass_with_django]: http://compass-style.org/blog/2011/05/09/compass-django/ "How to use Compass/Sass with Django"
 
 <!-- coffee links -->
 [coffee_script]: http://coffeescript.org "Coffee Script"
